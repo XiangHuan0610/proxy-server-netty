@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c662ed85-c657-408e-af06-709e7e948544" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/DataTransHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/HttpTestHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/NettyProxyHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/http/HttpConnectionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/obj/ProxyPathFacotry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/HttpGateWayRouteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/HttpGateWayRouteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/HttpRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/chx/demo/http/HttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/http/HttpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/chx/demo/server/HttpGateWayRouteServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/server/HttpGateWayRouteServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/chx/demo/server/HttpProxyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/server/HttpProxyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/conf/proxy-config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conf/proxy-config.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IlluminatedCloudWorkspaceSettings">
+    <option name="projectWorkspaceSettings">
+      <ProjectWorkspaceSettings>
+        <option name="anonymousApexSettings">
+          <AnonymousApexSettings>
+            <option name="savedDocuments">
+              <list>
+                <AnonymousApexSavedDocument>
+                  <option name="name" value="Anonymous Apex 1" />
+                </AnonymousApexSavedDocument>
+              </list>
+            </option>
+          </AnonymousApexSettings>
+        </option>
+        <option name="soqlQuerySettings">
+          <SoqlQuerySettings>
+            <option name="savedDocuments">
+              <list>
+                <SoqlQuerySavedDocument>
+                  <option name="name" value="SOQL Query 1" />
+                </SoqlQuerySavedDocument>
+              </list>
+            </option>
+          </SoqlQuerySettings>
+        </option>
+      </ProjectWorkspaceSettings>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SsDvYPWqYxLyw8WCo445PZmEAZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ToolWindowSciView.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/Java/proxy-server-netty/src/main/java/github/chx/demo/server&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/Netty核心技术&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="github.chx.demo.server" />
+      <recent name="github.chx.demo.handler" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.HttpProxyServer">
+    <configuration name="HttpGateWayRouteServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="github.chx.demo.server.HttpGateWayRouteServer" />
+      <module name="proxy-server-netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.chx.demo.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpProxyServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="github.chx.demo.server.HttpProxyServer" />
+      <module name="proxy-server-netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.chx.demo.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpProxyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="github.chx.demo.server.HttpProxyServer" />
+      <module name="proxy-server-netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.chx.demo.handler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpProxyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="github.chx.demo.server.HttpProxyServer" />
+      <module name="proxy-server-netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.chx.demo.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpProxyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="github.chx.demo.server.HttpProxyServer" />
+      <module name="proxy-server-netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.chx.demo.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpProxyServer" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="github.chx.demo.server.HttpProxyServer" />
+      <module name="proxy-server-netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.chx.demo.handler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyBootstrapService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="github.chx.demo.server.NettyBootstrapService" />
+      <module name="proxy-server-netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.chx.demo.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="github.chx.demo.handler.HttpForwarderServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="github.chx.demo.handler.HttpForwarderServer" />
+      <module name="proxy-server-netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.chx.demo.handler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.HttpProxyServer" />
+        <item itemvalue="应用程序.HttpGateWayRouteServer" />
+        <item itemvalue="应用程序.HttpProxyServer" />
+        <item itemvalue="应用程序.HttpProxyServer" />
+        <item itemvalue="应用程序.HttpProxyServer (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="c662ed85-c657-408e-af06-709e7e948544" name="更改" comment="" />
+      <created>1689926627447</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689926627447</updated>
+      <workItem from="1689926628959" duration="19591000" />
+      <workItem from="1690002210145" duration="3850000" />
+      <workItem from="1690006780604" duration="5412000" />
+      <workItem from="1690107478288" duration="6544000" />
+      <workItem from="1690115016329" duration="3627000" />
+      <workItem from="1690165393556" duration="19000" />
+      <workItem from="1690173917474" duration="5828000" />
+      <workItem from="1690181680615" duration="7943000" />
+      <workItem from="1690194057901" duration="613000" />
+      <workItem from="1690249716606" duration="3632000" />
+      <workItem from="1690275598782" duration="2900000" />
+      <workItem from="1690278908178" duration="2169000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="io.netty.util.IllegalReferenceCountException" package="io.netty.util" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="io.netty.handler.codec.EncoderException" package="io.netty.handler.codec" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

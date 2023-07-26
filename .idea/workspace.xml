@@ -5,17 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c662ed85-c657-408e-af06-709e7e948544" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/DataTransHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/HttpTestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/NettyProxyHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/http/HttpConnectionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/obj/ProxyPathFacotry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/http/HttpPasringPath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/obj/UserAddressFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/obj/UserLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/server/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/HttpGateWayRouteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/HttpGateWayRouteHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/HttpRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/NettyProxyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/handler/NettyProxyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/chx/demo/http/HttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/http/HttpClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/chx/demo/server/HttpGateWayRouteServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/server/HttpGateWayRouteServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/chx/demo/server/HttpProxyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/chx/demo/server/HttpProxyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/conf/proxy-config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conf/proxy-config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/conf/location.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/conf/proxy-config.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/handler/HttpGateWayRouteHandler$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/chx/demo/handler/HttpGateWayRouteHandler$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/handler/HttpGateWayRouteHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/chx/demo/handler/HttpGateWayRouteHandler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/handler/HttpGateWayRouteHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/chx/demo/handler/HttpGateWayRouteHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/handler/NettyProxyHandler$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/chx/demo/handler/NettyProxyHandler$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/handler/NettyProxyHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/chx/demo/handler/NettyProxyHandler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/handler/NettyProxyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/chx/demo/handler/NettyProxyHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/http/HttpParsingPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/http/HttpResponseHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/http/HttpResponseObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/http/HttpServerUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/obj/LocationAddress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/obj/UserAddressDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/obj/UserAddressFacotry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/obj/serivce/UserDefinedServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/server/HttpGateWayRouteServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/chx/demo/server/HttpGateWayRouteServer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/server/HttpGateWayRouteServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/chx/demo/server/HttpGateWayRouteServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/server/HttpProxyServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/chx/demo/server/HttpProxyServer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/server/HttpProxyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/chx/demo/server/HttpProxyServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/chx/demo/server/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/chx/demo/server/Test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +107,7 @@
     &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -96,7 +117,7 @@
       <recent name="github.chx.demo.handler" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.HttpProxyServer">
+  <component name="RunManager" selected="应用程序.Test">
     <configuration name="HttpGateWayRouteServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="github.chx.demo.server.HttpGateWayRouteServer" />
       <module name="proxy-server-netty" />
@@ -188,12 +209,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="github.chx.demo.handler.HttpForwarderServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="github.chx.demo.handler.HttpForwarderServer" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="github.chx.demo.server.Test" />
       <module name="proxy-server-netty" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="github.chx.demo.handler.*" />
+          <option name="PATTERN" value="github.chx.demo.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -203,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.HttpProxyServer" />
+        <item itemvalue="应用程序.Test" />
         <item itemvalue="应用程序.HttpGateWayRouteServer" />
         <item itemvalue="应用程序.HttpProxyServer" />
         <item itemvalue="应用程序.HttpProxyServer" />
-        <item itemvalue="应用程序.HttpProxyServer (1)" />
+        <item itemvalue="应用程序.HttpProxyServer" />
       </list>
     </recent_temporary>
   </component>
@@ -231,6 +252,10 @@
       <workItem from="1690249716606" duration="3632000" />
       <workItem from="1690275598782" duration="2900000" />
       <workItem from="1690278908178" duration="2169000" />
+      <workItem from="1690281099021" duration="1908000" />
+      <workItem from="1690338413534" duration="165000" />
+      <workItem from="1690354742722" duration="6214000" />
+      <workItem from="1690363038023" duration="2113000" />
     </task>
     <servers />
   </component>

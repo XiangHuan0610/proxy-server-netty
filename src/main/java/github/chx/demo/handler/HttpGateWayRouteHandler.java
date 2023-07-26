@@ -1,11 +1,11 @@
 package github.chx.demo.handler;
 
+import com.sun.net.httpserver.HttpsParameters;
 import github.chx.demo.http.HttpClient;
 import github.chx.demo.http.HttpConnectionUtil;
-import github.chx.demo.http.HttpParsingPath;
-import github.chx.demo.http.HttpResponseHandler;
-import github.chx.demo.obj.LocationAddress;
-import github.chx.demo.obj.UserAddressFacotry;
+
+import github.chx.demo.http.HttpPasringPath;
+import github.chx.demo.obj.UserAddressFactory;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.*;
 import io.netty.handler.codec.http.*;
@@ -28,45 +28,48 @@ import java.util.HashMap;
  */
 public class HttpGateWayRouteHandler extends SimpleChannelInboundHandler<HttpObject> {
 
-    private UserAddressFacotry facotry;
+    private UserAddressFactory facotry;
 
-    public HttpGateWayRouteHandler(UserAddressFacotry facotry){
+    public HttpGateWayRouteHandler(UserAddressFactory facotry){
         this.facotry = facotry;
     }
 
-    private HttpResponseHandler reponseHandler;
-
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, HttpObject msg) throws Exception {
-        if (msg instanceof  HttpRequest){
+        if (msg instanceof HttpRequest){
             FullHttpRequest request = (FullHttpRequest) msg;
+
+            request.retain();
 
             // 获取uri
             String uri = request.getUri();
 
             // 获取服务名称
-            String serverName = HttpParsingPath.getServerName(uri);
+            String name = HttpPasringPath.parsimeName(uri);
+            String location = facotry.get(name);
 
             // 获取ip和端口
-            LocationAddress locationAddress = facotry.getUserAddress(serverName).getLocationAddress();
+            String host = HttpPasringPath.parsimeHost(location);
+            Integer port = HttpPasringPath.parsimePort(location);
 
-            // 获取请求路径与携带的参数,并重新设置请求参数
-            String url = HttpParsingPath.forwardRequest(uri);
+            // 设置url
+            String url = HttpPasringPath.parsimeUrl(uri);
             request.setUri(url);
 
-            // 设置handler
+            // 添加处理器
             HashMap<String, ChannelHandler> map = new HashMap<>();
             map.put("httpClient",new HttpClientCodec());
             map.put("dataTransHandler",new DataTransHandler(ctx.channel()));
-            ReferenceCountUtil.retain(request);
-            HttpConnectionUtil.connectToRemote(ctx,locationAddress.getHost(),locationAddress.getPort(),3000,map).addListener(new ChannelFutureListener() {
+
+            // 连接
+            HttpConnectionUtil.connectToRemote(ctx,host,port,3000,map).addListener(new ChannelFutureListener() {
                 @Override
                 public void operationComplete(ChannelFuture channelFuture) throws Exception {
                     if (channelFuture.isSuccess()) {
                         //代理服务器连接目标服务器成功
                         //发送消息到目标服务器
                         //关闭长连接
-                        request.headers().set(HttpHeaderNames.CONNECTION, "close");
+//                        request.headers().set(HttpHeaderNames.CONNECTION, "close");
 
                         //转发请求到目标服务器
                         channelFuture.channel().writeAndFlush(request).addListener(new ChannelFutureListener() {
@@ -89,6 +92,7 @@ public class HttpGateWayRouteHandler extends SimpleChannelInboundHandler<HttpObj
                     }
                 }
             });
+
         }
     }
 

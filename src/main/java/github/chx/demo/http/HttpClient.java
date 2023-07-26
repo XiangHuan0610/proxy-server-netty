@@ -15,9 +15,7 @@ import org.apache.http.util.EntityUtils;
 public class HttpClient {
 
     private static DefaultFullHttpResponse defaultFullGetHttpResponse;
-
     private static DefaultFullHttpResponse defaultFullPostHttpResponse;
-
     public static DefaultFullHttpResponse sendHttpGetRequest(String host, Integer port, String path){
         CloseableHttpClient httpClient = HttpClients.createDefault();
         // 生成uri
@@ -92,7 +90,6 @@ public class HttpClient {
        }
         return defaultFullPostHttpResponse;
     }
-
     public static DefaultFullHttpResponse getResponse(HttpResponseStatus statusCode, String message) {
         return new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, statusCode, Unpooled.copiedBuffer(message, CharsetUtil.UTF_8));
     }

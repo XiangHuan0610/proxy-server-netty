@@ -36,7 +36,7 @@ public class NettyProxyHandler extends SimpleChannelInboundHandler<FullHttpReque
             map.put("httpClient",new HttpClientCodec());
             map.put("dataTransHandler",new DataTransHandler(ctx.channel()));
             //创建客户端连接目标机器
-            HttpConnectionUtil.connectToRemote(ctx,"127.0.0.1",9203,1000,map).addListener(new ChannelFutureListener() {
+            HttpConnectionUtil.connectToRemote(ctx,"127.0.0.1",9202,3000,map).addListener(new ChannelFutureListener() {
                 @Override
                 public void operationComplete(ChannelFuture channelFuture) throws Exception {
                     if (channelFuture.isSuccess()) {

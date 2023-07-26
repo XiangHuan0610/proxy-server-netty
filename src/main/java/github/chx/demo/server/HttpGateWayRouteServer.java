@@ -1,8 +1,7 @@
 package github.chx.demo.server;
 
 import github.chx.demo.handler.HttpGateWayRouteHandler;
-import github.chx.demo.obj.LocationAddress;
-import github.chx.demo.obj.UserAddressFacotry;
+import github.chx.demo.obj.UserAddressFactory;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -27,7 +26,9 @@ public class HttpGateWayRouteServer {
     private static final String host = "127.0.0.1";
     private static final Integer prot = 88;
 
-    private static UserAddressFacotry facotry;
+
+
+    private static UserAddressFactory facotry;
 
     public static void main(String[] args) {
         loadingConfig();
@@ -36,7 +37,6 @@ public class HttpGateWayRouteServer {
 
         try{
             ServerBootstrap serverBootstrap = new ServerBootstrap();
-            System.out.println(facotry.getUserAddress("user").getLocationAddress().toString());
             serverBootstrap.group(bossGroup,workerGroup)
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new ChannelInitializer<SocketChannel>() {
@@ -63,14 +63,10 @@ public class HttpGateWayRouteServer {
     private static void loadingConfig() {
         try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/conf/location.txt"))) {
             String line;
-            facotry = new UserAddressFacotry();
+            facotry = new UserAddressFactory();
             while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-                String[] serverName = line.split("-");
-                String[] location = serverName[1].split(":");
-                LocationAddress locationAddress = new LocationAddress(location[0], Integer.parseInt(location[1]));
-//                UserAddressDto userAddressDto = new UserAddressDto(serverName[0],locationAddress);
-                facotry.addAddress(serverName[0],locationAddress);
+                String[] split = line.split(" ");
+                facotry.put(split[0],split[1]);
             }
         } catch (IOException e) {
             e.printStackTrace();

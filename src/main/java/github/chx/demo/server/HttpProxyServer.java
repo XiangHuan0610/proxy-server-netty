@@ -1,9 +1,7 @@
 package github.chx.demo.server;
 
 import github.chx.demo.handler.NettyProxyHandler;
-import github.chx.demo.obj.LocationAddress;
 import github.chx.demo.obj.ProxyPathFacotry;
-import github.chx.demo.obj.UserAddressFacotry;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;

@@ -9,5 +9,8 @@
         <module name="proxy-server-netty" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="proxy-server-netty" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

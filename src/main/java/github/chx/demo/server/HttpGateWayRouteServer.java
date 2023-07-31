@@ -4,6 +4,7 @@ import github.chx.demo.handler.HttpGateWayRouteHandler;
 import github.chx.demo.obj.UserAddressFactory;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
+import io.netty.channel.ChannelOption;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
@@ -32,6 +33,7 @@ public class HttpGateWayRouteServer {
 
     public static void main(String[] args) {
         loadingConfig();
+        System.out.println(facotry.toString());
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
 
@@ -39,6 +41,7 @@ public class HttpGateWayRouteServer {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             serverBootstrap.group(bossGroup,workerGroup)
                     .channel(NioServerSocketChannel.class)
+                    .option(ChannelOption.SO_BACKLOG,128)
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
@@ -46,7 +49,7 @@ public class HttpGateWayRouteServer {
                             ChannelPipeline pipeline = socketChannel.pipeline();
                             pipeline.addLast("httpCodec",new HttpServerCodec()); // http 解码器
                             pipeline.addLast("aggregator",new HttpObjectAggregator(65536)); //  聚合http消息
-                            pipeline.addLast(new ChunkedWriteHandler()); // 支持异步发送大文件
+//                            pipeline.addLast(new ChunkedWriteHandler()); // 支持异步发送大文件
                             pipeline.addLast(new JsonObjectDecoder()); // json数据解码器
                             pipeline.addLast(new HttpGateWayRouteHandler(facotry));
                         }

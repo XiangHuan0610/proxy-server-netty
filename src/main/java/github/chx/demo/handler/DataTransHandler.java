@@ -2,14 +2,15 @@ package github.chx.demo.handler;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.PooledByteBufAllocator;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.*;
-import io.netty.handler.codec.http.FullHttpResponse;
-import io.netty.handler.codec.http.HttpObject;
-import io.netty.handler.codec.http.HttpResponse;
+import io.netty.handler.codec.http.*;
 import io.netty.util.CharsetUtil;
 import io.netty.util.ReferenceCountUtil;
 import io.netty.util.concurrent.EventExecutorGroup;
+import org.apache.http.util.EntityUtils;
 
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -30,7 +31,18 @@ public class DataTransHandler extends SimpleChannelInboundHandler<Object> {
             return;
         }
 
-        channel.writeAndFlush(msg);
+        if (msg instanceof  DefaultHttpContent) {
+            DefaultHttpContent defaultHttpContent = (DefaultHttpContent) msg;
+
+            // 创建 响应
+            DefaultFullHttpResponse defaultFullPostHttpResponse = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK,
+                    Unpooled.copiedBuffer(defaultHttpContent.content().toString(CharsetUtil.UTF_8), CharsetUtil.UTF_8));
+
+            // 设置响应头
+            defaultFullPostHttpResponse.headers().set(HttpHeaderNames.CONTENT_TYPE,"application/json");
+            defaultFullPostHttpResponse.headers().set(HttpHeaderNames.CONTENT_LENGTH,defaultFullPostHttpResponse.content().readableBytes());
+            channel.writeAndFlush(defaultFullPostHttpResponse);
+        }
     }
 
     @Override
@@ -46,7 +58,7 @@ public class DataTransHandler extends SimpleChannelInboundHandler<Object> {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-
+//        cause.printStackTrace();;
 //        System.out.println("data es");
         ctx.close();
     }
